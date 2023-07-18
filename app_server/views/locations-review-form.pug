@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1= title
+  <form>
+    <input type="text" class="form-control" placeholder="Имя" aria-label="Имя"> 
+
+    <select class="form-select" aria-label="Пример выбора по умолчанию">
+      <option selected>Your rating choice?</option>
+      <option value="1">Bad</option>
+      <option value="2">Good</option>
+      <option value="3">Attraction</option>
+    </select>
+
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label">Review text</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add review</button>
+  </form>

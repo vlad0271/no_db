@@ -1,0 +1,30 @@
+extends layout
+
+block content 
+  <h4> #{header} </h4>
+
+
+  <div class="container" (ng-controller='locationListCtrl')> 
+    <div class="row">
+      <div class="col"> 
+        <ul class="list-unstyled">
+          each location in loctexts
+            <li>  #{location.name}:
+                <ul>
+                  each facil in location.facils
+                    <li>  #{facil} </li>              
+                </ul>
+            </li>
+            <li> #{location.adres} </li>      
+        </ul>
+        <a class="btn btn-primary" href="/locations" role="button">Go to details</a>
+      </div>
+      <div class="col"> 
+        <p><em> #{lefttext} </em></p>
+      </div>
+    </div>
+  </div>
+
+
+ 
+
